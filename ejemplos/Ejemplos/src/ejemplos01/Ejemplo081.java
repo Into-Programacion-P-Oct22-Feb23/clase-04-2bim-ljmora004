@@ -5,27 +5,28 @@
  */
 package ejemplos01;
 
-/**
- *
- * @author reroes
- */
-public class Ejemplo08 {
+import java.util.Scanner;
+
+public class Ejemplo081 {
 
     public static void main(String[] args) {
         // 
+        Scanner entrada = new Scanner(System.in);
         String mensajeSuma;
         String mensajeSumaDos;
         int opcion;
-        mensajeSuma = obtenerTablaSumar(10, 9); // se invoca al método 
-                                                       // obtenerTablaSumar
-                                                       // y el valor que 
-                                                       // devuelve se lo 
-                                                       // almacena  en mensajeSuma
+        System.out.println("Ingrese 1 para sumar.\nIngrese 2 para multiplicar.");
+        opcion = entrada.nextInt();
         
-        mensajeSumaDos = obtenerTablaMultiplicar(10, 9);
-        
-        System.out.printf("%s\n", mensajeSuma);
-        System.out.printf("%s\n", mensajeSumaDos);
+            if(opcion == 1){
+                mensajeSuma = obtenerTablaSumar(10, 9);
+                System.out.printf("%s\n", mensajeSuma);
+            }else if(opcion == 2){
+                mensajeSumaDos = obtenerTablaMultiplicar(10, 9);
+                System.out.printf("%s\n", mensajeSumaDos);
+            }else{
+                System.out.println("Error. Esa opcion no existe.");
+            }
     }
         
     public static String obtenerTablaSumar(int limite, int tabla){
