@@ -5,21 +5,18 @@
  */
 package ejemplos02;
 
-import java.util.Scanner;
-
-public class Ejemplo041 {
+public class Ejemplo042 {
 
     public static void main(String[] args) {
-        //
-        Scanner entrada = new Scanner(System.in);
+
         
-        System.out.println("Ingrese el primer valor:");
-        int primerValor = entrada.nextInt();
-        System.out.println("Ingrese el segundo valor:");
-        int segundoValor = entrada.nextInt();
+        int [] arreglo1 = {100, 200, 300, 400, 500};
+        int [] arreglo2 = {1000, 2000, 3000, 4000, 5000};
         
-        obtenerSuma(primerValor, segundoValor); 
-        
+        for(int i = 0; i < arreglo1.length; i++){
+            obtenerSuma(arreglo1[i], arreglo2[i]);
+        }  
+
     }
         
     public static void obtenerSuma(int a, int b){
